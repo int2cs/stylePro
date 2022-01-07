@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Open+Sans:ital,wght@0,400;1,300&display=swap');
+
+:root {
+    --font1: 'Luxurious Roman', cursive;;
+    --primary: rgb(25, 29, 45);
+    --secondary: rgb(122, 78, 66);
+
+    --borderWidth: 5px
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font1);
+}
+
+body {
+    color: white;
+    background: var(--primary);
+    font-family: 'Open Sans', sans-serif;
+}
+
+main {
+    width: 1160px;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+header h1 {
+    font-family: var(--font1);
+}
+
+header .burger {
+    width: 40px;
+    height: 40px;
+    background: red;
+}
+
+.howToDress {
+    width: 1160px;
+    margin: 50px auto;
+    padding: 0 100px;
+    position: relative;
+}
+
+.howToDress .wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+.howToDress:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: var(--secondary);
+}
+
+.howToDress-left h2 {
+    font-size: 2.5em;
+    font-weight: lighter;
+}
+
+.howToDress-left h2:nth-child(3) {
+    margin: 25px 0
+}
+
+.howToDress-left {
+    padding-top: 50px;
+    width: 60%
+}
+
+.howToDress-left .image-left {
+    margin: 30px 0;
+    display: block;
+    width: 350px;
+    height: 350px;
+}
+
+.howToDress-left ol li {
+    display: list-item;
+    line-height: 1.8em;
+}
+
+.howToDress-right .image-right {
+    display: block;
+    width: 580px;
+    height: 600px;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 0 15px var(--primary);
+}
+
+.howToDress-bottom-right {
+    margin-top: 50px;
+    display: flex;
+    gap: 10px
+}
+
+.howToDress-bottom-right img {
+    width: 305px;
+    height: 300px;
+    object-fit: cover;
+    object-position: left;
+}
+
+.howToDress-bottom-right p {
+    font-style: italic;
+    line-height: 1.8em;
+    width: 35%;
+}
+
+.section2 {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    padding: 3em;
+    text-align: center;
+}
+
+.section2 h2 {
+    font-family: var(--font1);
+    font-weight: lighter;
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.section2 p {
+    font-size: 1.1em;
+    line-height: 1.5em;
+    font-weight: lighter;
+}
+
+.section2 .square {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+
+.section2 .square1 {
+    top: 0;
+    left: 0;
+    border-top: var(--borderWidth) solid var(--secondary);
+    border-left: var(--borderWidth) solid var(--secondary)
+}
+
+.section2 .square2 {
+    top: 0;
+    right: 0;
+    border-top: var(--borderWidth) solid var(--secondary);
+    border-right: var(--borderWidth) solid var(--secondary);
+}
+
+.section2 .square3 {
+    bottom: 0;
+    left: 0;
+    border-bottom: var(--borderWidth) solid var(--secondary);
+    border-left: var(--borderWidth) solid var(--secondary);
+}
+
+.section2 .square4 {
+    bottom: 0;
+    right: 0;
+    border-bottom: var(--borderWidth) solid var(--secondary);
+    border-right: var(--borderWidth) solid var(--secondary);
+}
