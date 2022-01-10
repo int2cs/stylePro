@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Open+Sans:ital,wght@0,400;1,300&display=swap');
 
 :root {
-    --font1: 'Luxurious Roman', cursive;;
+    --font1: 'Luxurious Roman', cursive;
+    --black: #181A1B;
     --primary: rgb(25, 29, 45);
     --secondary: rgb(122, 78, 66);
 
@@ -16,6 +17,20 @@
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font1);
+}
+
+ul {
+    padding: 0;
+    margin: 0
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 body {
@@ -45,84 +60,91 @@ header .burger {
     background: red;
 }
 
-.howToDress {
-    width: 1160px;
-    margin: 50px auto;
-    padding: 0 100px;
-    position: relative;
+/*Section1*/
+.section1 {
+    width: 100%;
+    margin-top: 50px;
+    padding: 80px;
+    position: relative
 }
 
-.howToDress .wrapper {
+.section1 .row {
     display: flex;
     justify-content: space-between;
-    gap: 70px;
+    align-items: center;
+    gap: 50px;
 }
 
-.howToDress:before {
+.section1 .two {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 50px;
+}
+
+.section1 .row .left {
+    flex: 1;
+}
+
+.section1 .row .right {
+    flex: 1;
+}
+
+.section1 .one:before {
     content: "";
     position: absolute;
     z-index: -1;
     top: -50px;
     left: 0;
     width: 100%;
-    height: 40%;
+    height: 50%;
     background: var(--secondary);
 }
 
-.howToDress-left h2 {
-    font-size: 2.5em;
-    font-weight: lighter;
-}
-
-.howToDress-left h2:nth-child(3) {
-    margin: 25px 0
-}
-
-.howToDress-left {
-    padding-top: 50px;
-    width: 60%
-}
-
-.howToDress-left .image-left {
-    margin: 30px 0;
+.section1 .one .left img {
     display: block;
-    width: 350px;
-    height: 350px;
-}
-
-.howToDress-left ol li {
-    display: list-item;
-    line-height: 1.8em;
-}
-
-.howToDress-right .image-right {
-    display: block;
-    width: 580px;
-    height: 600px;
+    width: 70%;
+    height: 50%;
     object-fit: cover;
-    object-position: center;
-    box-shadow: 0 0 15px var(--primary);
+    object-position: top;
+    margin: 40px auto
 }
 
-.howToDress-bottom-right {
-    margin-top: 50px;
+.section1 .one .right img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.section1 .two .left ol {
+    margin-top: 30px;
+}
+
+.section1 .two .left ol li {
+    line-height: 2em;
+}
+
+.section1 .two .right {
     display: flex;
-    gap: 10px
+    align-items: start;
+    gap: 20px;
+    height: 100%;
 }
 
-.howToDress-bottom-right img {
-    width: 305px;
+.section1 .two .right img {
+    width: 65%;
     height: 300px;
     object-fit: cover;
     object-position: left;
 }
 
-.howToDress-bottom-right p {
+.section1 .two .right p {
     font-style: italic;
-    line-height: 1.8em;
-    width: 35%;
 }
 
+
+/*Section2*/
 .section2 {
     position: relative;
     width: 80%;
@@ -134,7 +156,6 @@ header .burger {
 .section2 h2 {
     font-family: var(--font1);
     font-weight: lighter;
-    font-size: 3em;
     margin-bottom: 0.5em;
 }
 
@@ -176,4 +197,342 @@ header .burger {
     right: 0;
     border-bottom: var(--borderWidth) solid var(--secondary);
     border-right: var(--borderWidth) solid var(--secondary);
+}
+
+.section3 {
+    display: flex;
+    margin-top: 100px
+}
+
+.section3 .left {
+    width: 50%;
+    text-align: center;
+    position: relative;
+}
+
+.section3 .left img {
+    width: 100%;
+    top: -30px;
+    right: -80px;
+    position: absolute;
+}
+
+.section3 .left::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: var(--secondary);
+}
+
+.section3 .left .wrapper {
+    padding: 30px;
+    background: var(--black);
+    transform: translate(5%, 40%);
+}
+
+.section3 .left .card {
+    padding: 60px 30px;
+    border: 1px solid var(--secondary);
+}
+
+.section3 .left .card h2 {
+    font-size: 2em;
+}
+
+.section3 .left .card p {
+    margin: 30px 0
+}
+
+.section3 .left .card a {
+    padding: 0.5em 1em;
+    border: 1px solid var(--secondary);
+    text-transform: uppercase;
+    transition: color 0.3s, background 0.3s;
+}
+
+.section3 .left .card a:hover {
+    color: var(--black);
+    background: var(--secondary);
+}
+
+.section .right {
+    width: 50%;
+}
+
+.section3 .right .wrapper {
+    width: 50%;
+    margin: auto;
+}
+
+.section3 .right h2 {
+    font-weight: lighter;
+    margin-bottom: 30px;
+}
+
+.section3 .right ol li {
+    line-height: 2em;
+}
+
+footer {
+    margin-top: 150px;
+    border-top: 2px solid grey;
+    padding: 30px
+}
+
+footer nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer nav div {
+    padding: 2em
+}
+
+footer nav ul {
+    list-style-type: none;
+}
+
+footer nav ul li {
+    line-height: 1.5em;
+}
+
+footer h3 {
+    text-transform: uppercase;
+    margin-bottom: 1em;
+}
+
+footer .info {
+    flex: 1
+}
+
+footer .aide {
+    flex: 1
+}
+
+footer .contact {
+    flex: 1
+}
+
+footer .reseaux {
+    flex: 3;
+    text-align: right;
+}
+
+footer .reseaux ul {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+footer .reseaux ul li svg {
+    width: 30px;
+    height: 30px;
+}
+
+footer input[type="email"] {
+    padding: 0.5em 1em;
+    margin: 10px 0;
+    background: transparent;
+    border: 1px solid var(--secondary)
+}
+
+footer input[type="submit"] {
+    margin-left: 10px;
+    padding: 0.5em 1em;
+    color: white;
+    text-transform: uppercase;
+    background: transparent;
+    border: none;
+}
+
+footer input[type="submit"]:hover {
+    cursor: pointer;
+    color: white;
+    background: var(--secondary);
+}
+
+footer .copyright {
+    text-align: center;
+}
+
+@media screen and (max-width: 1179px) {
+    main {
+        width: 770px;
+    }
+
+    h2 {
+        font-size: 2em !important;
+    }
+
+    /*Section1*/
+    .section1 {
+        width: 100%;
+        padding: 0 20px;
+        margin-bottom: 30px;
+    }
+
+    .section1 .two .right {
+        display: block;
+    }
+
+    .section1 .two .right img {
+        width: 100%;
+        height: 200px;
+    }
+
+    /*Section2*/
+    /*Section3*/
+    .section3 .left {
+        width: 100%;
+    }
+
+    .section3 .right .wrapper {
+        width: 80%;
+    }
+
+    .section3 .left img {
+        top: 30px;
+        left: 0
+    }
+
+    .section3 .left .wrapper {
+        transform: translate(-5%, 35%);
+    }
+
+    .section3 .left h2 {
+        font-size: 1.5em !important;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    main {
+        width: 80%;
+        margin: auto;
+    }
+
+    h2 {
+        font-size: 2.5em !important;
+        font-weight: lighter;
+    }
+
+    .section1 .row {
+        display: block;
+    }
+
+    .section1 .one .left img {
+        display: none;
+    }
+
+    .section1 .one .right img {
+        display: block;
+        width: 80%;
+        margin: 20px auto
+    }
+
+    .section1 .two .left ol {
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .section1 .two .right img {
+        height: 300px;
+        object-position: center;
+    }
+
+    /*Section2*/
+    .section2 {
+        width: 100%;
+        margin: 50px 0;
+        padding: 2em
+    }
+
+    .section2 h2 {
+        font-size: 2em !important;
+    }
+
+    /*Section3*/
+    .section3 {
+        display: block;
+    }
+
+    .section3 .right {
+        margin-top: 150px;
+    }
+
+    .section3 ol {
+        padding-left: 20px;
+    }
+
+    footer {
+        margin-top: 50px
+    }
+
+    footer h3 {
+        font-size: 1em;
+    }
+
+    footer .info {
+        grid-area: i
+    }
+
+    footer .aide {
+        grid-area: a
+    }
+
+    footer .contact {
+        grid-area: c
+    }
+
+    footer .reseaux {
+        grid-area: r
+    }
+
+    footer nav {
+        display: grid;
+        grid-template-areas:
+        "i a c"
+        "r r r";
+    }
+
+    footer .reseaux {
+        text-align: center;
+    }
+
+    footer .reseaux ul {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h2 {
+        font-size: 1.5em !important;
+    }
+
+    .section1 .one:before {
+        height: 40%;
+    }
+
+    footer nav {
+        display: block;
+    }
+
+    footer nav div {
+        padding: 1em 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .section3 .card a {
+        font-size: 0.8em;
+    }
+
+    .section3 .right {
+        margin-top: 200px;
+    }
 }
